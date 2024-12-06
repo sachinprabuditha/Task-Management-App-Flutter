@@ -63,6 +63,7 @@ class _TaskListViewState extends State<TaskListView> {
               },
               decoration: InputDecoration(
                 hintText: 'Search tasks...',
+                hintStyle: const TextStyle(color: Colors.grey),
                 prefixIcon: const Icon(Icons.search),
                 filled: true,
                 fillColor: Colors.white,
@@ -153,7 +154,7 @@ class _TaskListViewState extends State<TaskListView> {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(12), // Less rounded corners for a sleeker look
     ),
-    color: task.isCompleted ?? false ? Colors.grey[200] : Colors.white, // Background color for completed tasks
+    color: task.isCompleted ?? false ? Colors.grey[200] : const Color.fromARGB(255, 233, 242, 252), // Background color for completed tasks
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
