@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_manager/screens/get_start_screen.dart';
 import 'viewmodels/task_viewmodel.dart';
-import 'views/task_list_view.dart';
 
 void main() {
   runApp(
@@ -10,12 +9,14 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (context) => TaskViewModel()),
       ],
-      child: TaskManagerApp(),
+      child: const TaskManagerApp(),
     ),
   );
 }
 
 class TaskManagerApp extends StatelessWidget {
+  const TaskManagerApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
